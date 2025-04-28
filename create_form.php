@@ -14,12 +14,12 @@ if (!$conn) {
 }
 
 
+
 if (isset($_POST['submit'])) {
     $names = $_POST['names'];
     $email = $_POST['email'];
     $salary = $_POST['salary'];
-    $sql = "INSERT INTO employee (names, email, salary)
-    VALUES ('$names', '$email', '$salary')";
+    $sql = "INSERT INTO employee (names, email, salary) VALUES ('$names', '$email', '$salary')";
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
       } else {
